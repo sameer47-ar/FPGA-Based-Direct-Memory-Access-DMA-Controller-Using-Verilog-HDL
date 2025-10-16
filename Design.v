@@ -46,11 +46,7 @@ always @(posedge clk or posedge reset) begin
         data_out <= 0;
         read_data <= 0;
     end else begin
-        // Default outputs
-        mem_read <= 0;
-        mem_write <= 0;
-        transfer_done <= 0;
-        
+       
         case (state)
             IDLE: begin
                 dma_ack <= 0;
